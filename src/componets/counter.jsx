@@ -13,8 +13,21 @@ class Counter extends Component {
   //   handleIncrement = () => {
   //     this.setState({ value: this.state.value + 1 });
   //   };
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      //Ajax call to get new data
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("Counter - Unmount");
+  }
 
   render() {
+    console.log("Counter - Rendered");
+
     return (
       <div>
         {this.props.children}
