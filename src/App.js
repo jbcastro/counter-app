@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import NavBar from "./componets/navbar";
-import "./App.css";
+import NavBar from "./componets/navBar";
 import Counters from "./componets/counters";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -28,10 +28,11 @@ class App extends Component {
   };
 
   handleReset = () => {
-    this.state.counters.map(c => {
+    const Counter = this.state.counters.map(c => {
       c.value = 0;
       return c;
     });
+    this.setState({ Counters });
   };
 
   handleDelete = counterId => {
