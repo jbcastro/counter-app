@@ -8,7 +8,7 @@ class Counter extends Component {
   //   constructor() {
   //     super();
   //     this.handleIncrement = this.handleIncrement.bind(this);
-  //   }
+  //   testung}
 
   handleIncrement = () => {
     console.log("Increment Clicked", this);
